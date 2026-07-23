@@ -259,7 +259,10 @@
     return e;
   }
 
-  fetch('data/content.json')
+  // Cache-busting: zawsze pobieramy świeżą wersję treści, żeby zmiany
+  // wprowadzone przez panel (Pages CMS) pojawiały się od razu, a nie po
+  // wygaśnięciu cache przeglądarki (plik jest maleńki, brak wpływu na wydajność).
+  fetch('data/content.json?v=' + Date.now(), { cache: 'no-store' })
     .then(function (r) { return r.json(); })
     .then(function (data) {
 
