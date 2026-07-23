@@ -1,0 +1,24 @@
+{
+  "pricing": [
+    { "name": "Box kwiatowy", "note": "", "price": "od 80 zł" },
+    { "name": "Bukiet okolicznościowy", "note": "", "price": "od 50 zł" },
+    { "name": "Wiązanka pogrzebowa", "note": "(w formie bukietu)", "price": "od 50 zł" },
+    { "name": "Palma pogrzebowa", "note": "(na florecie z igliwiem)", "price": "od 200 zł" },
+    { "name": "Wieniec pogrzebowy", "note": "", "price": "od 300 zł" },
+    { "name": "Serce pogrzebowe", "note": "", "price": "od 450 zł" },
+    { "name": "Wianek pod urnę", "note": "", "price": "od 100 zł" },
+    { "name": "Kompozycje nagrobne", "note": "(komplet flakon + stroik)", "price": "od 200 zł" }
+  ],
+  "gallery": [
+    { "photo": "assets/pink-roses.png" },
+    { "photo": "assets/iris-bouquet.png" },
+    { "photo": "assets/red-roses-babys.png" },
+    { "photo": "assets/peonies-vase.png" },
+    { "photo": "assets/autumn-mix.png" },
+    { "photo": "assets/pastel-bouquet.png" },
+    { "photo": "assets/peach-sunflower.png" },
+    { "photo": "assets/lily-gerbera.png" },
+    { "photo": "assets/red-bouquet.png" },
+    { "photo": "assets/box-teddy.png" }
+  ]
+}

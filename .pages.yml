@@ -1,0 +1,25 @@
+media:
+  input: assets
+  output: assets
+
+content:
+  - name: content
+    label: Treść strony
+    type: file
+    path: data/content.json
+    format: json
+    fields:
+      - name: pricing
+        label: Cennik
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "Nazwa usługi", type: string, required: true }
+          - { name: note, label: "Dopisek w nawiasie (opcjonalnie)", type: string, required: false }
+          - { name: price, label: "Cena (np. „od 80 zł”)", type: string, required: true }
+      - name: gallery
+        label: Galeria zdjęć
+        type: object
+        list: true
+        fields:
+          - { name: photo, label: Zdjęcie, type: image, required: true }
