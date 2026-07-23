@@ -8,7 +8,6 @@
 <body>
 <x-dc>
 <helmet>
-<meta name="design_doc_mode" content="canvas">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&family=Parisienne&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,24 +17,35 @@
   a{color:inherit;text-decoration:none}
   a:hover{opacity:.72}
   img{display:block;max-width:100%}
+  html{scroll-behavior:smooth}
+  @media(max-width:840px){
+    #1a header{flex-wrap:wrap;gap:14px;justify-content:center;text-align:center}
+    #1a nav{order:3;width:100%;justify-content:center;flex-wrap:wrap;gap:18px}
+    #1a > div[style*="grid-template-columns:1.05fr"]{grid-template-columns:1fr !important;padding:40px 26px !important}
+    #1a > div[style*="grid-template-columns:.8fr"]{grid-template-columns:1fr !important;padding:56px 26px !important}
+    #1a > div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important}
+    #1a > div[style*="grid-template-columns:repeat(3,1fr)"]{padding:56px 26px !important}
+    #1a [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr) !important}
+    #1a [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr !important}
+    #1a [style*="grid-template-columns:repeat(3,1fr);background"]{grid-template-columns:1fr !important}
+    #1a h1{font-size:46px !important}
+    #1a h2{font-size:36px !important}
+    #1a [style*="height:520px"]{height:360px !important}
+  }
 </style>
 </helmet>
-<section data-turn="1" style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:70px;padding:70px 56px 140px;background:#dfe6e2">
+<div style="padding:0;background:#dfe6e2">
+<div id="1a" style="width:100%;max-width:1180px;margin:0 auto;background:#faf6f2;color:#41474a;box-shadow:0 20px 60px -40px rgba(60,80,70,.4)">
 
-<div style="display:flex;flex-direction:column;gap:18px">
-<div style="font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:.16em;color:#4a5b52;background:#fff;border:1px solid #b9cabf;padding:8px 16px;border-radius:100px;align-self:flex-start">1a — ROMANTYCZNY PASTEL</div>
-
-<div id="1a" style="width:1180px;background:#faf6f2;border-radius:22px;overflow:hidden;box-shadow:0 40px 90px -50px rgba(60,80,70,.55);color:#41474a">
-
-  <header style="display:flex;align-items:center;justify-content:space-between;padding:22px 46px;border-bottom:1px solid #ece3db">
+  <header style="display:flex;align-items:center;justify-content:space-between;padding:22px 46px;border-bottom:1px solid #ece3db;position:sticky;top:0;background:rgba(250,246,242,.92);backdrop-filter:blur(8px);z-index:10">
     <div style="display:flex;align-items:baseline;gap:12px">
       <span style="font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:600;letter-spacing:.02em;color:#33473f">Kwiatomania</span>
-      <span style="font-family:'Parisienne',cursive;font-size:18px;color:#c98a9b">Nicola</span>
+      <span style="font-family:'Parisienne',cursive;font-size:18px;color:#c98a9b">Nicola Cierpisz</span>
     </div>
-    <nav style="display:flex;gap:30px;font-size:14px;letter-spacing:.03em;color:#5b625f">
+    <nav style="display:flex;gap:26px;font-size:14px;letter-spacing:.03em;color:#5b625f;white-space:nowrap">
       <a href="#1a-onas">O nas</a><a href="#1a-galeria">Galeria</a><a href="#1a-oferta">Oferta</a><a href="#1a-cennik">Cennik</a><a href="#1a-kontakt">Kontakt</a>
     </nav>
-    <a href="tel:+48721990041" style="font-family:'Archivo',sans-serif;font-size:13px;letter-spacing:.06em;background:#33473f;color:#f3efe9;padding:11px 20px;border-radius:100px">721 990 041</a>
+    <a href="tel:+48721990041" style="font-family:'Archivo',sans-serif;font-size:13px;letter-spacing:.06em;background:#33473f;color:#f3efe9;padding:11px 20px;border-radius:100px;white-space:nowrap">721 990 041</a>
   </header>
 
   <div style="display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding:66px 46px 58px">
@@ -65,7 +75,7 @@
     <div>
       <div style="font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:.24em;color:#8a9c92;margin-bottom:16px">O KWIACIARNI</div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:44px;line-height:1.1;color:#33473f;margin-bottom:22px">Pasja do kwiatów w sercu Głubczyc</h2>
-      <p style="font-size:16px;line-height:1.8;color:#5f665f;margin-bottom:16px">Kwiatomania to autorska pracownia florystyczna prowadzona przez Nicolę. Tworzymy kompozycje na każdą okazję — od romantycznych bukietów, przez eleganckie boxy kwiatowe, po pełną oprawę ślubów i dyskretną florystykę pogrzebową.</p>
+      <p style="font-size:16px;line-height:1.8;color:#5f665f;margin-bottom:16px">Kwiatomania to autorska pracownia florystyczna prowadzona przez Nicolę. Tworzymy kompozycje na każdą okazję — od romantycznych bukietów, przez eleganckie boxy kwiatowe, po dyskretną florystykę pogrzebową.</p>
       <p style="font-size:16px;line-height:1.8;color:#5f665f">Pracujemy tylko na świeżych, starannie dobranych kwiatach. Doradzimy, dobierzemy kompozycję do okazji i budżetu, i dostarczymy ją na czas.</p>
     </div>
   </div>
@@ -94,13 +104,11 @@
       <div style="font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:.24em;color:#8a9c92;margin-bottom:12px">CO DLA CIEBIE ZROBIMY</div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:46px;color:#33473f">Nasza oferta</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:800px;margin:0 auto">
       <div style="background:#fff;border-radius:16px;padding:32px"><h3 style="font-family:'Cormorant Garamond',serif;font-size:27px;color:#33473f;margin-bottom:10px">Bukiety okolicznościowe</h3><p style="font-size:15px;line-height:1.7;color:#6a716a">Na urodziny, imieniny, rocznice i każdą chwilę, która zasługuje na kwiaty.</p></div>
       <div style="background:#fff;border-radius:16px;padding:32px"><h3 style="font-family:'Cormorant Garamond',serif;font-size:27px;color:#33473f;margin-bottom:10px">Boxy kwiatowe</h3><p style="font-size:15px;line-height:1.7;color:#6a716a">Eleganckie kompozycje w ozdobnych pudełkach — gotowe na prezent.</p></div>
-      <div style="background:#fff;border-radius:16px;padding:32px"><h3 style="font-family:'Cormorant Garamond',serif;font-size:27px;color:#33473f;margin-bottom:10px">Śluby i uroczystości</h3><p style="font-size:15px;line-height:1.7;color:#6a716a">Wiązanki ślubne, dekoracje sal i kościoła — pełna oprawa Waszego dnia.</p></div>
       <div style="background:#fff;border-radius:16px;padding:32px"><h3 style="font-family:'Cormorant Garamond',serif;font-size:27px;color:#33473f;margin-bottom:10px">Florystyka pogrzebowa</h3><p style="font-size:15px;line-height:1.7;color:#6a716a">Wieńce, wiązanki, serca i kompozycje nagrobne — z szacunkiem i wyczuciem.</p></div>
       <div style="background:#fff;border-radius:16px;padding:32px"><h3 style="font-family:'Cormorant Garamond',serif;font-size:27px;color:#33473f;margin-bottom:10px">Bony podarunkowe</h3><p style="font-size:15px;line-height:1.7;color:#6a716a">Nie wiesz, co wybrać? Podaruj bon — kwiaty wybierze obdarowany.</p></div>
-      <div style="background:#fff;border-radius:16px;padding:32px"><h3 style="font-family:'Cormorant Garamond',serif;font-size:27px;color:#33473f;margin-bottom:10px">Dowóz kwiatów</h3><p style="font-size:15px;line-height:1.7;color:#6a716a">Dostarczymy bukiet pod wskazany adres na terenie Głubczyc i okolic.</p></div>
     </div>
   </div>
 
@@ -111,7 +119,6 @@
       <div style="display:flex;flex-direction:column;gap:2px">
         <div style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid #ece3db"><span style="font-size:16px">Bukiet okolicznościowy</span><span style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#c98a9b">od 60 zł</span></div>
         <div style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid #ece3db"><span style="font-size:16px">Box kwiatowy</span><span style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#c98a9b">od 120 zł</span></div>
-        <div style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid #ece3db"><span style="font-size:16px">Wiązanka ślubna</span><span style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#c98a9b">od 200 zł</span></div>
         <div style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid #ece3db"><span style="font-size:16px">Wieniec pogrzebowy</span><span style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#c98a9b">od 180 zł</span></div>
         <div style="display:flex;justify-content:space-between;padding:16px 0"><span style="font-size:16px">Wiązanka pogrzebowa</span><span style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#c98a9b">od 90 zł</span></div>
       </div>
@@ -150,242 +157,16 @@
         <a href="tel:+48721990041" style="font-family:'Archivo',sans-serif;font-size:13px;letter-spacing:.06em;background:#c98a9b;color:#fff;padding:15px 28px;border-radius:100px">Zadzwoń teraz</a>
       </div>
     </div>
-    <img src="assets/pastel-bouquet.png" alt="Bukiet" style="width:100%;height:100%;object-fit:cover">
+    <img src="assets/pastel-bouquet.png" alt="Bukiet" style="width:100%;height:100%;object-fit:cover;min-height:340px">
   </div>
 
-  <footer style="background:#2a3a33;color:#9db0a6;padding:26px 46px;display:flex;justify-content:space-between;align-items:center;font-size:13px">
-    <span style="font-family:'Cormorant Garamond',serif;font-size:19px;color:#e7ede9">Kwiatomania · Nicola</span>
+  <footer style="background:#2a3a33;color:#9db0a6;padding:26px 46px;display:flex;justify-content:space-between;align-items:center;font-size:13px;flex-wrap:wrap;gap:10px">
+    <span style="font-family:'Cormorant Garamond',serif;font-size:19px;color:#e7ede9">Kwiatomania · Nicola Cierpisz</span>
     <span>© 2026 Kwiatomania Głubczyce · Wszystkie prawa zastrzeżone</span>
   </footer>
 
 </div>
 </div>
-<div style="display:flex;flex-direction:column;gap:18px">
-<div style="font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:.16em;color:#7a6a58;background:#fff;border:1px solid #e0d3c2;padding:8px 16px;border-radius:100px;align-self:flex-start">1b — ELEGANCKA BIEL</div>
-
-<div id="1b" style="width:1180px;background:#fbfaf7;border-radius:22px;overflow:hidden;box-shadow:0 40px 90px -50px rgba(60,55,45,.45);color:#3a352e">
-
-  <header style="display:flex;align-items:center;justify-content:space-between;padding:30px 56px">
-    <span style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;letter-spacing:.14em;color:#2c2822">KWIATOMANIA</span>
-    <nav style="display:flex;gap:34px;font-size:13px;letter-spacing:.08em;color:#6b6459;text-transform:uppercase">
-      <a href="#1b-onas">O nas</a><a href="#1b-galeria">Galeria</a><a href="#1b-oferta">Oferta</a><a href="#1b-cennik">Cennik</a><a href="#1b-kontakt">Kontakt</a>
-    </nav>
-    <span style="font-family:'Cormorant Garamond',serif;font-size:20px;color:#a68a72">721 990 041</span>
-  </header>
-
-  <div style="text-align:center;padding:60px 56px 40px">
-    <div style="font-family:'Parisienne',cursive;font-size:34px;color:#c19a86;margin-bottom:10px">pracownia florystyczna</div>
-    <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:92px;line-height:1;color:#2c2822;letter-spacing:-.02em">Sztuka układania<br><span style="font-style:italic">kwiatów</span></h1>
-    <p style="font-size:16px;line-height:1.8;color:#6b6459;max-width:520px;margin:28px auto 0">Bukiety, kompozycje ślubne i florystyka okolicznościowa tworzone w Głubczycach — z dbałością o każdy detal i szacunkiem do natury.</p>
-  </div>
-  <div style="padding:0 56px 70px">
-    <img src="assets/hero-big.png" alt="Bukiet" style="width:100%;height:520px;object-fit:cover;border-radius:8px">
-  </div>
-
-  <div id="1b-onas" style="display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:40px 56px 90px;align-items:center">
-    <div>
-      <div style="width:44px;height:1px;background:#c19a86;margin-bottom:26px"></div>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:48px;line-height:1.12;color:#2c2822;margin-bottom:24px">Kwiaty na każdą<br>ważną chwilę</h2>
-      <p style="font-size:16px;line-height:1.9;color:#6b6459;margin-bottom:18px">Kwiatomania to autorska pracownia prowadzona przez Nicolę. Każdą kompozycję układamy ręcznie, ze świeżych i starannie dobranych kwiatów.</p>
-      <p style="font-size:16px;line-height:1.9;color:#6b6459">Od romantycznych bukietów, przez oprawę ślubów, po dyskretną florystykę pogrzebową — doradzimy i dopasujemy kompozycję do okazji.</p>
-    </div>
-    <img src="assets/peonies-vase.png" alt="Kompozycja" style="width:100%;height:460px;object-fit:cover;border-radius:8px">
-  </div>
-
-  <div id="1b-galeria" style="padding:0 56px 90px">
-    <div style="text-align:center;margin-bottom:44px">
-      <div style="font-family:'Parisienne',cursive;font-size:26px;color:#c19a86">realizacje</div>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:52px;color:#2c2822">Galeria</h2>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
-      <img src="assets/pink-roses.png" style="width:100%;height:320px;object-fit:cover;border-radius:6px">
-      <img src="assets/red-roses-babys.png" style="width:100%;height:320px;object-fit:cover;border-radius:6px">
-      <img src="assets/iris-bouquet.png" style="width:100%;height:320px;object-fit:cover;border-radius:6px">
-      <img src="assets/pastel-bouquet.png" style="width:100%;height:320px;object-fit:cover;border-radius:6px">
-      <img src="assets/autumn-mix.png" style="width:100%;height:320px;object-fit:cover;border-radius:6px">
-      <img src="assets/peach-sunflower.png" style="width:100%;height:320px;object-fit:cover;border-radius:6px">
-    </div>
-  </div>
-
-  <div id="1b-oferta" style="border-top:1px solid #ece5da;border-bottom:1px solid #ece5da;padding:80px 56px">
-    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:44px;color:#2c2822;text-align:center;margin-bottom:52px">Oferta</h2>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0 70px">
-      <div style="display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid #ece5da"><div><h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;color:#2c2822">Bukiety okolicznościowe</h3><p style="font-size:14px;color:#8a8377;margin-top:4px">Urodziny, imieniny, rocznice</p></div></div>
-      <div style="display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid #ece5da"><div><h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;color:#2c2822">Boxy kwiatowe</h3><p style="font-size:14px;color:#8a8377;margin-top:4px">Eleganckie kompozycje w pudełku</p></div></div>
-      <div style="display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid #ece5da"><div><h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;color:#2c2822">Śluby i uroczystości</h3><p style="font-size:14px;color:#8a8377;margin-top:4px">Wiązanki i dekoracje</p></div></div>
-      <div style="display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid #ece5da"><div><h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;color:#2c2822">Florystyka pogrzebowa</h3><p style="font-size:14px;color:#8a8377;margin-top:4px">Wieńce, wiązanki, serca</p></div></div>
-      <div style="display:flex;justify-content:space-between;gap:20px;padding:22px 0"><div><h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;color:#2c2822">Bony podarunkowe</h3><p style="font-size:14px;color:#8a8377;margin-top:4px">Prezent, który zawsze trafia</p></div></div>
-      <div style="display:flex;justify-content:space-between;gap:20px;padding:22px 0"><div><h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;color:#2c2822">Dowóz kwiatów</h3><p style="font-size:14px;color:#8a8377;margin-top:4px">Głubczyce i okolice</p></div></div>
-    </div>
-  </div>
-
-  <div id="1b-cennik" style="display:grid;grid-template-columns:1.1fr .9fr;gap:70px;padding:90px 56px;align-items:center">
-    <div>
-      <div style="font-family:'Parisienne',cursive;font-size:26px;color:#c19a86;margin-bottom:6px">cennik</div>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:44px;color:#2c2822;margin-bottom:30px">Orientacyjne ceny</h2>
-      <div style="display:flex;flex-direction:column">
-        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:15px 0;border-bottom:1px dotted #ccc3b5"><span style="font-size:16px">Bukiet okolicznościowy</span><span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#a68a72">od 60 zł</span></div>
-        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:15px 0;border-bottom:1px dotted #ccc3b5"><span style="font-size:16px">Box kwiatowy</span><span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#a68a72">od 120 zł</span></div>
-        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:15px 0;border-bottom:1px dotted #ccc3b5"><span style="font-size:16px">Wiązanka ślubna</span><span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#a68a72">od 200 zł</span></div>
-        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:15px 0;border-bottom:1px dotted #ccc3b5"><span style="font-size:16px">Wieniec pogrzebowy</span><span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#a68a72">od 180 zł</span></div>
-        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:15px 0"><span style="font-size:16px">Wiązanka pogrzebowa</span><span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#a68a72">od 90 zł</span></div>
-      </div>
-    </div>
-    <div style="background:#f3ede4;border-radius:10px;padding:44px;text-align:center">
-      <div style="font-family:'Parisienne',cursive;font-size:28px;color:#c19a86;margin-bottom:6px">Klub Kwiatomanii</div>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#2c2822;margin-bottom:16px">Program lojalnościowy</h3>
-      <p style="font-size:15px;line-height:1.7;color:#6b6459;margin-bottom:24px">Zbieraj pieczątki — za 10 zakupów bukiet gratis, a stali klienci mają -10%.</p>
-      <div style="display:flex;gap:9px;justify-content:center;flex-wrap:wrap;max-width:280px;margin:0 auto">
-        <span style="width:38px;height:38px;border-radius:50%;background:#c19a86;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif">✿</span>
-        <span style="width:38px;height:38px;border-radius:50%;background:#c19a86;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif">✿</span>
-        <span style="width:38px;height:38px;border-radius:50%;background:#c19a86;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif">✿</span>
-        <span style="width:38px;height:38px;border-radius:50%;border:1.5px dashed #c8bba9"></span>
-        <span style="width:38px;height:38px;border-radius:50%;border:1.5px dashed #c8bba9"></span>
-        <span style="width:38px;height:38px;border-radius:50%;border:1.5px dashed #c8bba9"></span>
-        <span style="width:38px;height:38px;border-radius:50%;border:1.5px dashed #c8bba9"></span>
-        <span style="width:38px;height:38px;border-radius:50%;border:1.5px dashed #c8bba9"></span>
-        <span style="width:38px;height:38px;border-radius:50%;border:1.5px dashed #c8bba9"></span>
-        <span style="width:38px;height:38px;border-radius:50%;border:1.5px dashed #c8bba9"></span>
-      </div>
-    </div>
-  </div>
-
-  <div id="1b-kontakt" style="text-align:center;padding:90px 56px;background:#f3ede4">
-    <div style="font-family:'Parisienne',cursive;font-size:28px;color:#c19a86;margin-bottom:6px">zapraszamy</div>
-    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:50px;color:#2c2822;margin-bottom:30px">Odwiedź naszą pracownię</h2>
-    <div style="display:flex;justify-content:center;gap:70px;flex-wrap:wrap;font-size:16px;color:#6b6459">
-      <div><div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a68a72;margin-bottom:6px">Adres</div>ul. Fabryczna 7/3<br>48-100 Głubczyce</div>
-      <div><div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a68a72;margin-bottom:6px">Telefon</div><a href="tel:+48721990041">721 990 041</a></div>
-      <div><div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a68a72;margin-bottom:6px">Godziny</div>Pon–Pt 9–16<br>Sob 9–13</div>
-    </div>
-    <a href="tel:+48721990041" style="display:inline-block;margin-top:38px;font-family:'Archivo',sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase;background:#2c2822;color:#f3ede4;padding:16px 34px;border-radius:2px">Zadzwoń teraz</a>
-  </div>
-
-  <footer style="text-align:center;padding:30px;font-size:13px;color:#a89f90;letter-spacing:.08em">© 2026 KWIATOMANIA · GŁUBCZYCE</footer>
-</div>
-</div>
-
-<div style="display:flex;flex-direction:column;gap:18px">
-<div style="font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:.16em;color:#c98a9b;background:#20241f;border:1px solid #3a4239;padding:8px 16px;border-radius:100px;align-self:flex-start">1c — ŚMIAŁO I NOWOCZEŚNIE</div>
-
-<div id="1c" style="width:1180px;background:#191c17;border-radius:22px;overflow:hidden;box-shadow:0 40px 90px -50px rgba(0,0,0,.6);color:#e8e4dc">
-
-  <header style="display:flex;align-items:center;justify-content:space-between;padding:26px 50px;border-bottom:1px solid rgba(255,255,255,.08)">
-    <span style="font-family:'Archivo',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.01em;color:#fff">Kwiatomania<span style="color:#e6a3b4">.</span></span>
-    <nav style="display:flex;gap:30px;font-family:'Archivo',sans-serif;font-size:13px;font-weight:500;color:#b4b8ac">
-      <a href="#1c-onas">O nas</a><a href="#1c-galeria">Galeria</a><a href="#1c-oferta">Oferta</a><a href="#1c-cennik">Cennik</a><a href="#1c-kontakt">Kontakt</a>
-    </nav>
-    <a href="tel:+48721990041" style="font-family:'Archivo',sans-serif;font-weight:600;font-size:13px;background:#e6a3b4;color:#191c17;padding:12px 22px;border-radius:100px">721 990 041</a>
-  </header>
-
-  <div style="position:relative">
-    <img src="assets/hero-big.png" alt="Bukiet" style="width:100%;height:600px;object-fit:cover">
-    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(25,28,23,.92) 0%,rgba(25,28,23,.55) 45%,rgba(25,28,23,0) 75%)"></div>
-    <div style="position:absolute;top:50%;left:50px;transform:translateY(-50%);max-width:560px">
-      <div style="font-family:'Archivo',sans-serif;font-size:12px;font-weight:600;letter-spacing:.28em;color:#e6a3b4;margin-bottom:18px">KWIACIARNIA · GŁUBCZYCE</div>
-      <h1 style="font-family:'Archivo',sans-serif;font-weight:800;font-size:78px;line-height:.98;letter-spacing:-.03em;color:#fff">ŚWIEŻE<br>KWIATY<br><span style="color:#e6a3b4">NA CO DZIEŃ.</span></h1>
-      <p style="font-size:17px;line-height:1.7;color:#c8ccc0;margin:26px 0 32px;max-width:420px">Autorskie bukiety, oprawa ślubów i florystyka pogrzebowa. Ręcznie, ze świeżych kwiatów.</p>
-      <div style="display:flex;gap:14px">
-        <a href="#1c-oferta" style="font-family:'Archivo',sans-serif;font-weight:600;font-size:14px;background:#e6a3b4;color:#191c17;padding:16px 30px;border-radius:100px">Zobacz ofertę</a>
-        <a href="#1c-kontakt" style="font-family:'Archivo',sans-serif;font-weight:600;font-size:14px;border:1px solid rgba(255,255,255,.3);color:#fff;padding:16px 30px;border-radius:100px">Zamów bukiet</a>
-      </div>
-    </div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:repeat(4,1fr)">
-    <div style="padding:30px 34px;border-right:1px solid rgba(255,255,255,.08)"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:34px;color:#e6a3b4">7</div><div style="font-size:13px;color:#9aa093;margin-top:2px">dni w tygodniu świeże dostawy</div></div>
-    <div style="padding:30px 34px;border-right:1px solid rgba(255,255,255,.08)"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:34px;color:#e6a3b4">100%</div><div style="font-size:13px;color:#9aa093;margin-top:2px">ręcznie układane kompozycje</div></div>
-    <div style="padding:30px 34px;border-right:1px solid rgba(255,255,255,.08)"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:34px;color:#e6a3b4">-10%</div><div style="font-size:13px;color:#9aa093;margin-top:2px">dla stałych klientów</div></div>
-    <div style="padding:30px 34px"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:34px;color:#e6a3b4">24h</div><div style="font-size:13px;color:#9aa093;margin-top:2px">dowóz w Głubczycach</div></div>
-  </div>
-
-  <div id="1c-onas" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:90px 50px;align-items:center;background:#1f231d">
-    <img src="assets/pink-roses.png" alt="Bukiet" style="width:100%;height:480px;object-fit:cover;border-radius:14px">
-    <div>
-      <div style="font-family:'Archivo',sans-serif;font-size:12px;font-weight:600;letter-spacing:.24em;color:#e6a3b4;margin-bottom:16px">O NAS</div>
-      <h2 style="font-family:'Archivo',sans-serif;font-weight:800;font-size:46px;line-height:1.05;letter-spacing:-.02em;color:#fff;margin-bottom:22px">Florystyka z charakterem</h2>
-      <p style="font-size:16px;line-height:1.8;color:#c8ccc0;margin-bottom:16px">Kwiatomania to autorska pracownia Nicoli. Tworzymy odważne, nowoczesne kompozycje i klasyczne bukiety — zawsze ze świeżych, starannie dobranych kwiatów.</p>
-      <p style="font-size:16px;line-height:1.8;color:#c8ccc0">Doradzimy, dobierzemy kompozycję do okazji i budżetu, i dostarczymy ją na czas.</p>
-    </div>
-  </div>
-
-  <div id="1c-galeria" style="padding:90px 50px">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px">
-      <h2 style="font-family:'Archivo',sans-serif;font-weight:800;font-size:46px;letter-spacing:-.02em;color:#fff">Galeria</h2>
-      <span style="font-size:14px;color:#9aa093">Nasze najnowsze realizacje</span>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px">
-      <img src="assets/red-roses-babys.png" style="width:100%;height:100%;object-fit:cover;border-radius:10px;grid-column:span 2;grid-row:span 2">
-      <img src="assets/iris-bouquet.png" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
-      <img src="assets/autumn-mix.png" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
-      <img src="assets/peach-sunflower.png" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
-      <img src="assets/pastel-bouquet.png" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
-      <img src="assets/lily-gerbera.png" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
-      <img src="assets/box-teddy.png" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
-      <img src="assets/red-bouquet.png" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
-      <img src="assets/peonies-vase.png" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
-    </div>
-  </div>
-
-  <div id="1c-oferta" style="padding:90px 50px;background:#1f231d">
-    <h2 style="font-family:'Archivo',sans-serif;font-weight:800;font-size:46px;letter-spacing:-.02em;color:#fff;margin-bottom:44px">Co robimy</h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
-      <div style="border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:30px"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:15px;color:#e6a3b4;margin-bottom:12px">01</div><h3 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:21px;color:#fff;margin-bottom:8px">Bukiety okolicznościowe</h3><p style="font-size:14px;line-height:1.7;color:#9aa093">Urodziny, imieniny, rocznice i każda ważna chwila.</p></div>
-      <div style="border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:30px"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:15px;color:#e6a3b4;margin-bottom:12px">02</div><h3 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:21px;color:#fff;margin-bottom:8px">Boxy kwiatowe</h3><p style="font-size:14px;line-height:1.7;color:#9aa093">Eleganckie kompozycje w ozdobnych pudełkach.</p></div>
-      <div style="border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:30px"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:15px;color:#e6a3b4;margin-bottom:12px">03</div><h3 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:21px;color:#fff;margin-bottom:8px">Śluby i uroczystości</h3><p style="font-size:14px;line-height:1.7;color:#9aa093">Wiązanki ślubne i pełna dekoracja sal.</p></div>
-      <div style="border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:30px"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:15px;color:#e6a3b4;margin-bottom:12px">04</div><h3 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:21px;color:#fff;margin-bottom:8px">Florystyka pogrzebowa</h3><p style="font-size:14px;line-height:1.7;color:#9aa093">Wieńce, wiązanki i kompozycje nagrobne.</p></div>
-      <div style="border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:30px"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:15px;color:#e6a3b4;margin-bottom:12px">05</div><h3 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:21px;color:#fff;margin-bottom:8px">Bony podarunkowe</h3><p style="font-size:14px;line-height:1.7;color:#9aa093">Prezent, który zawsze trafia w gusta.</p></div>
-      <div style="border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:30px"><div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:15px;color:#e6a3b4;margin-bottom:12px">06</div><h3 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:21px;color:#fff;margin-bottom:8px">Dowóz kwiatów</h3><p style="font-size:14px;line-height:1.7;color:#9aa093">Głubczyce i okolice — szybko i bezpiecznie.</p></div>
-    </div>
-  </div>
-
-  <div id="1c-cennik" style="display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:90px 50px;align-items:start">
-    <div>
-      <h2 style="font-family:'Archivo',sans-serif;font-weight:800;font-size:46px;letter-spacing:-.02em;color:#fff;margin-bottom:30px">Cennik</h2>
-      <div style="display:flex;flex-direction:column">
-        <div style="display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1)"><span style="font-size:16px;color:#e8e4dc">Bukiet okolicznościowy</span><span style="font-family:'Archivo',sans-serif;font-weight:700;font-size:18px;color:#e6a3b4">od 60 zł</span></div>
-        <div style="display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1)"><span style="font-size:16px;color:#e8e4dc">Box kwiatowy</span><span style="font-family:'Archivo',sans-serif;font-weight:700;font-size:18px;color:#e6a3b4">od 120 zł</span></div>
-        <div style="display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1)"><span style="font-size:16px;color:#e8e4dc">Wiązanka ślubna</span><span style="font-family:'Archivo',sans-serif;font-weight:700;font-size:18px;color:#e6a3b4">od 200 zł</span></div>
-        <div style="display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1)"><span style="font-size:16px;color:#e8e4dc">Wieniec pogrzebowy</span><span style="font-family:'Archivo',sans-serif;font-weight:700;font-size:18px;color:#e6a3b4">od 180 zł</span></div>
-        <div style="display:flex;justify-content:space-between;padding:18px 0"><span style="font-size:16px;color:#e8e4dc">Wiązanka pogrzebowa</span><span style="font-family:'Archivo',sans-serif;font-weight:700;font-size:18px;color:#e6a3b4">od 90 zł</span></div>
-      </div>
-    </div>
-    <div style="background:#e6a3b4;color:#191c17;border-radius:16px;padding:44px">
-      <h3 style="font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;margin-bottom:6px">Klub Kwiatomanii</h3>
-      <p style="font-size:15px;line-height:1.7;margin-bottom:26px;opacity:.85">Zbieraj pieczątki przy każdym zakupie. 10 pieczątek = bukiet gratis. Stali klienci: -10%.</p>
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
-        <div style="aspect-ratio:1;border-radius:50%;background:#191c17;color:#e6a3b4;display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:700">✿</div>
-        <div style="aspect-ratio:1;border-radius:50%;background:#191c17;color:#e6a3b4;display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:700">✿</div>
-        <div style="aspect-ratio:1;border-radius:50%;background:#191c17;color:#e6a3b4;display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:700">✿</div>
-        <div style="aspect-ratio:1;border-radius:50%;background:#191c17;color:#e6a3b4;display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:700">✿</div>
-        <div style="aspect-ratio:1;border-radius:50%;background:#191c17;color:#e6a3b4;display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:700">✿</div>
-        <div style="aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(25,28,23,.4)"></div>
-        <div style="aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(25,28,23,.4)"></div>
-        <div style="aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(25,28,23,.4)"></div>
-        <div style="aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(25,28,23,.4)"></div>
-        <div style="aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(25,28,23,.4);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700">gratis</div>
-      </div>
-    </div>
-  </div>
-
-  <div id="1c-kontakt" style="position:relative">
-    <img src="assets/red-bouquet.png" alt="Bukiet" style="width:100%;height:440px;object-fit:cover">
-    <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(25,28,23,.94),rgba(25,28,23,.55))"></div>
-    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px">
-      <h2 style="font-family:'Archivo',sans-serif;font-weight:800;font-size:52px;letter-spacing:-.02em;color:#fff;margin-bottom:14px">Zamów swój bukiet</h2>
-      <p style="font-size:16px;color:#c8ccc0;margin-bottom:8px">ul. Fabryczna 7/3, 48-100 Głubczyce · Pon–Pt 9–16 · Sob 9–13</p>
-      <a href="tel:+48721990041" style="font-family:'Archivo',sans-serif;font-weight:700;font-size:20px;color:#e6a3b4;margin-bottom:24px">721 990 041</a>
-      <a href="tel:+48721990041" style="font-family:'Archivo',sans-serif;font-weight:600;font-size:14px;background:#e6a3b4;color:#191c17;padding:16px 34px;border-radius:100px">Zadzwoń teraz</a>
-    </div>
-  </div>
-
-  <footer style="display:flex;justify-content:space-between;align-items:center;padding:26px 50px;font-size:13px;color:#7d8377;border-top:1px solid rgba(255,255,255,.08)">
-    <span style="font-family:'Archivo',sans-serif;font-weight:800;color:#fff">Kwiatomania<span style="color:#e6a3b4">.</span></span>
-    <span>© 2026 Kwiatomania · Głubczyce · Instagram @kwiatomania</span>
-  </footer>
-</div>
-</div>
-</section>
 </x-dc>
 </body>
 </html>
