@@ -1,7 +1,7 @@
 {
   "logo": "assets/logo.png",
-  "hero": "assets/hero-big.png",
-  "contact": "assets/pastel-bouquet.png",
+  "hero": "assets/IMG-20260723-WA0010.jpg",
+  "contact": "assets/IMG-20260723-WA0017.jpg",
   "pricing": [
     {
       "name": "Box kwiatowy",
@@ -41,28 +41,28 @@
   ],
   "gallery": [
     {
-      "photo": "assets/pink-roses.png"
+      "photo": "assets/IMG-20260723-WA0038.jpg"
     },
     {
-      "photo": "assets/iris-bouquet.png"
+      "photo": "assets/IMG-20260723-WA0037-1.jpg"
     },
     {
-      "photo": "assets/red-roses-babys.png"
+      "photo": "assets/IMG-20260723-WA0034.jpg"
     },
     {
-      "photo": "assets/peonies-vase.png"
+      "photo": "assets/IMG-20260723-WA0028.jpg"
     },
     {
-      "photo": "assets/autumn-mix.png"
+      "photo": "assets/IMG-20260723-WA0023.jpg"
     },
     {
-      "photo": "assets/pastel-bouquet.png"
+      "photo": "assets/IMG-20260723-WA0019.jpg"
     },
     {
-      "photo": "assets/peach-sunflower.png"
+      "photo": "assets/IMG-20260723-WA0012.jpg"
     },
     {
-      "photo": "assets/IMG-20260723-WA0037.jpg"
+      "photo": "assets/IMG-20260723-WA0011.jpg"
     },
     {
       "photo": "assets/IMG-20260723-WA0025.jpg"
