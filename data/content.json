@@ -1,4 +1,7 @@
 {
+  "logo": "assets/logo.png",
+  "hero": "assets/hero-big.png",
+  "contact": "assets/pastel-bouquet.png",
   "pricing": [
     {
       "name": "Box kwiatowy",

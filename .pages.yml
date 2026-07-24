@@ -9,6 +9,18 @@ content:
     path: data/content.json
     format: json
     fields:
+      - name: logo
+        label: Logo
+        type: image
+        required: false
+      - name: hero
+        label: "Zdjęcie główne (hero)"
+        type: image
+        required: false
+      - name: contact
+        label: "Zdjęcie przy kontakcie"
+        type: image
+        required: false
       - name: pricing
         label: Cennik
         type: object

@@ -143,7 +143,7 @@
     </div>
     <div style="position:relative">
       <div style="position:absolute;inset:-14px;border:1px solid #d3bcc2;border-radius:200px 200px 20px 20px"></div>
-      <img src="assets/hero-big.png" alt="Bukiet Kwiatomania" style="width:100%;height:520px;object-fit:cover;border-radius:200px 200px 16px 16px">
+      <img id="hero-img" src="assets/hero-big.png" alt="Bukiet Kwiatomania" style="width:100%;height:520px;object-fit:cover;border-radius:200px 200px 16px 16px">
     </div>
   </div>
 
@@ -154,7 +154,7 @@
   </div>
 
   <div id="1a-onas" style="display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:54px;padding:80px 46px">
-    <img src="assets/logo.png" alt="Logo Kwiatomania" style="width:100%;border-radius:16px;background:#eef2f0">
+    <img id="logo-img" src="assets/logo.png" alt="Logo Kwiatomania" style="width:100%;border-radius:16px;background:#eef2f0">
     <div>
       <div style="font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:.24em;color:#8a9c92;margin-bottom:16px">O KWIACIARNI</div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:44px;line-height:1.1;color:#33473f;margin-bottom:22px">Pasja do kwiatów w sercu Głubczyc</h2>
@@ -225,7 +225,7 @@
         <a href="tel:+48721990041" style="font-family:'Archivo',sans-serif;font-size:13px;letter-spacing:.06em;background:#c98a9b;color:#fff;padding:15px 28px;border-radius:100px">Zadzwoń teraz</a>
       </div>
     </div>
-    <img src="assets/pastel-bouquet.png" alt="Bukiet" style="width:100%;height:100%;object-fit:cover;min-height:340px">
+    <img id="contact-img" src="assets/pastel-bouquet.png" alt="Bukiet" style="width:100%;height:100%;object-fit:cover;min-height:340px">
   </div>
 
   <footer style="background:#2a3a33;color:#9db0a6;padding:26px 46px;display:flex;justify-content:space-between;align-items:center;font-size:13px;flex-wrap:wrap;gap:10px">
@@ -265,6 +265,24 @@
   fetch('data/content.json?v=' + Date.now(), { cache: 'no-store' })
     .then(function (r) { return r.json(); })
     .then(function (data) {
+
+      // Logo i zdjęcie główne (hero) — sterowane z panelu (Pages CMS).
+      if (data.logo) {
+        var logoImg = document.getElementById('logo-img');
+        if (logoImg) logoImg.src = data.logo;
+      }
+      if (data.hero) {
+        var heroImg = document.getElementById('hero-img');
+        if (heroImg) heroImg.src = data.hero;
+        // Podgląd społecznościowy (Open Graph) trzymamy zgodny w przeglądarce.
+        var heroAbs = new URL(data.hero, location.href).href;
+        var ogImg = document.querySelector('meta[property="og:image"]');
+        if (ogImg) ogImg.setAttribute('content', heroAbs);
+      }
+      if (data.contact) {
+        var contactImg = document.getElementById('contact-img');
+        if (contactImg) contactImg.src = data.contact;
+      }
 
       var cennik = document.getElementById('cennik-list');
       if (cennik && Array.isArray(data.pricing)) {
